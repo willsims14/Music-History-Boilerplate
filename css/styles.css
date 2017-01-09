@@ -1,0 +1,16 @@
+ul{
+	display: inline-block;
+	list-style: none;
+	width: 100%;
+	background: pink;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	border-style: solid;
+	border-color: black;
+}
+
+ul li{
+	float: left;
+	margin-left: 1%;
+	text-align: center;
+}
