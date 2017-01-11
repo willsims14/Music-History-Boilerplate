@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<nav>
+<nav class="flex-container-nav">
 	<ul>
 		<li><a href="index.html">View Music</a> |</li>
 		<li><a href="#">Add Music</a> |</li>
@@ -16,14 +16,62 @@
 	</ul>
 </nav>
 
-<div id="parent">
-	<div id="leftBar" class="kids">
-		<p>Song Length</p>
-	</div>
-	<div id="rightBar" class="kids">
-		<h1>Song Name</h1>
-		<p>Artist</p>
-	</div>
+<div class="flex-container">
+
+  <section class="flex-item sidebar__left">
+  	<div>Song Length:</div>
+  	<img src="img/volumeSlider.png"/>
+  	<div>Artist:</div>
+
+
+  	<select class="dropdown">
+  		<option selected>Options</option>
+  		<option> Option 1 </option>
+  		<option> Option 2 </option>
+  		<option> Option 3 </option>
+   		<option> Option 4 </option> 		
+  	</select>
+
+   	<div>Album:</div>
+  	<select class="dropdown">
+  		<option selected>Options</option>
+  		<option>Album Option 1 </option>
+  		<option>Album Option 2 </option>
+  		<option>Album Option 3 </option>
+   		<option>Album Option 4 </option> 		
+  	</select>
+
+  	<div>Genre:</div>
+
+  	<div class="flex-container checkboxContainer">
+      <div class="genreColumn1 flex-item1">
+    		<label><input type="checkbox" id="chk1" class="flex-item1">Rock</label>
+        <label><input type="checkbox" id="chk2" class="flex-item1">Classical</label>
+    		<label><input type="checkbox" id="chk3" class="flex-item1">Pop</label>
+      </div>
+      <div class="genreColumn2">
+        <label><input type="checkbox" id="chk4" class="flex-item1">Jazz</label>
+    		<label><input type="checkbox" id="chk5" class="flex-item1">Blues</label>
+        <label><input type="checkbox" id="chk6" class="flex-item1">Hip Hop</label>
+      </div>
+  	</div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section class="flex-item main">Main</section>
+
+
 </div>
 
 
