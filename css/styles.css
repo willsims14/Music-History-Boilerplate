@@ -1,3 +1,7 @@
+/*************************/
+/*** General Selectors ***/
+/*************************/
+
 .flex-container {
   padding: 0;
   margin: 0;
@@ -16,26 +20,19 @@
   	display: flex;
   	flex-flow: row wrap;
 }
+nav ul{
+	list-style: none;
+	width: 100%;
+	padding: 1%;
+	background-color: #FFB4B0;
+	border-style: solid;
+	border-color: black;
 
-.flex-container-nav ul {
-	align-self: center;
 }
-
-
-
-.sidebar__left {
-  	flex-grow: 1;
-	background-color: #4DD7FA
-}
-
-.sidebar__left div{
-	margin: 4%;
-}
-
-.main {
-  	flex-grow: 5;
-  	margin-left: 2%;
-	background-color: #FEFAC0
+nav ul li{
+	display: inline;
+	margin: 0%;
+	align-self: left;
 }
 
 .flex-item {
@@ -46,6 +43,43 @@
   	border-style: solid;
   	border-color: black;
 }
+
+
+/* Left Sidebar */
+
+.sidebar__left {
+  	flex-grow: 1;
+	background-color: #4DD7FA
+}
+
+.sidebar__left div{
+	margin: 4%;
+}
+
+/* Main Song List Selection */
+.main {
+  	flex-grow: 5;
+  	margin-left: 2%;
+	background-color: #FEFAC0
+}
+
+.songTitle{
+	margin-left: 2%;
+	clear: both;
+	display: inline;
+	color: #785616;
+}
+
+.songInfo{
+	list-style-type: none;
+}
+.songInfo li{
+	float: left;
+	color: #785616;
+	margin-right: 3%;
+}
+
+
 
 /******************/
 /*** Checkboxes ***/
@@ -72,7 +106,7 @@
 
 }
 
-
+/* Dropdown Menu selector */
 .dropdown{
 	border-style: solid;
 	border-color: black;
@@ -81,7 +115,7 @@
 	width: 80%;
 }
 
-
+/* Images */
 img{
 	width: 80%;
 	height: 10%%;
@@ -102,19 +136,4 @@ img{
 
 
 
-/* Navigation Bar */
-nav ul{
-	list-style: none;
-	width: 100%;
-	padding: 1%;
-	background-color: #FFB4B0;
-	border-style: solid;
-	border-color: black;
 
-}
-
-nav ul li{
-	display: inline;
-	margin: 1%;
-
-}
