@@ -72,11 +72,16 @@ nav ul li{
 
 .songInfo{
 	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-around;
 }
 .songInfo li{
 	float: left;
 	color: #785616;
-	margin-right: 3%;
+
+
 }
 
 
