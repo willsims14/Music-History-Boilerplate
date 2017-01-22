@@ -12,6 +12,7 @@ songs[songs.length] = "Terrapin Station > by The Grateful Dead on the album Terr
 // Put Each song into an object that will be inserted into an array
 for(var i = 0; i < songs.length; i++){
 	var newSong = songs[i].replace(">", "-");
+	newSong = newSong.replace("*", ".");
 	// console.log("New Song: ", newSong);
 
 	var song = {
@@ -20,6 +21,11 @@ for(var i = 0; i < songs.length; i++){
 		album: songs[i].substring(songs[i].indexOf("on the album") + 12, songs[i].length)
 	};
 
+	song.artist = song.artist.replace("*", "");
+	song.artist = song.artist.replace("@", "");
+	song.name = song.name.replace("(", "");
+	song.name = song.name.replace("!", "");
+	song.artist = song.artist.replace("ZT", "Z T");
 	songsObj[i] = song;
 }
 
@@ -43,6 +49,7 @@ for(var i = 0; i < songs.length; i++){
 	songHtmlStructure = songHtmlStructure.replace("SONG_GENRE", "Genre" + "		|	");
 	songHtmlStructure = songHtmlStructure.replace("SONG_ALBUM", songsObj[i].album);
 	songHtmlStructure = songHtmlStructure.replace("</ul>", "</ul><br>");
+	songHtmlStructure = songHtmlStructure.replace(`<ul class="songInfo">`, `<ul class="songInfo container">`)
 
 	console.log("Name: ", songsObj[i].name);
 	console.log("Artist: ", songsObj[i].artist);

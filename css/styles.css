@@ -74,15 +74,9 @@ nav ul li{
 	list-style-type: none;
 	display: flex;
 	flex-direction: row;
-	align-content: center;
-	justify-content: space-around;
 }
-.songInfo li{
-	float: left;
-	color: #785616;
 
 
-}
 
 
 
@@ -94,6 +88,7 @@ nav ul li{
 .checkboxContainer{
 	display: flex;
 	flex-direction: row;
+
 }
 
 /* The <div> element that holds the <label> and <input> elements */
