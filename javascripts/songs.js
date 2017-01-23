@@ -51,10 +51,7 @@ for(var i = 0; i < songs.length; i++){
 	songHtmlStructure = songHtmlStructure.replace("</ul>", "</ul><br>");
 	songHtmlStructure = songHtmlStructure.replace(`<ul class="songInfo">`, `<ul class="songInfo container">`)
 
-	console.log("Name: ", songsObj[i].name);
-	console.log("Artist: ", songsObj[i].artist);
 
-	console.log("HTML: ", songHtmlStructure);
 
 	var newSong = "<div class='song'>";
 	newSong += songHtmlStructure;
@@ -63,3 +60,15 @@ for(var i = 0; i < songs.length; i++){
 	songsContainer.innerHTML += newSong;
 
 }
+
+
+
+    // <div id="song--0" class="song">
+    //   <h2 class="songTitle">SONG_NAME</h2><br>
+    //   <ul class="songInfo">
+    //     <li class="col-sm-12 col-md-2">SONG_ARTIST</li>
+    //     <li class="col-sm-12 col-md-2">SONG_GENRE</li>
+    //     <li class="col-sm-12 col-md-2">SONG_ALBUM</li>
+    //     <li class="col-sm-12 col-md-2"><input type="button" id="deleteButton" value="delete"></li>
+    //   </ul>
+    // </div>
