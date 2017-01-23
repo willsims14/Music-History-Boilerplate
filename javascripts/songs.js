@@ -50,15 +50,39 @@ for(var i = 0; i < songs.length; i++){
 	songHtmlStructure = songHtmlStructure.replace("SONG_ALBUM", songsObj[i].album);
 	songHtmlStructure = songHtmlStructure.replace("</ul>", "</ul><br>");
 	songHtmlStructure = songHtmlStructure.replace(`<ul class="songInfo">`, `<ul class="songInfo container">`)
+	songHtmlStructure = songHtmlStructure.replace("--!", "--" + i);
 
+	console.log("struc: \n", songHtmlStructure);
 
-
-	var newSong = "<div class='song'>";
+	var newSong = `<div class="song" id="song--${i}">`;
 	newSong += songHtmlStructure;
 	newSong += "<div>";
 
 	songsContainer.innerHTML += newSong;
 
+
+}
+
+// Add event listeners to every delete button for each song
+for(var i = 0; i < songs.length; i++){
+	document.getElementById("deleteButton--" + i).addEventListener("click", function(event){
+		deleteSong(event.target.id);
+	});
+}
+function deleteSong(songID){
+	var index = parseInt(songID.substring(14, songID.length));
+	var allSongs = document.getElementById("main");
+	// Get song to delete from DOM
+	var songToDelete = document.getElementById("song--" + index);
+
+	console.log("Index: ", index);
+
+	// Delete songs from the array
+	songs.splice(index, 1);
+	songsObj.splice(index, 1);
+
+	// Delete song from DOM
+	songToDelete.parentNode.removeChild(songToDelete);
 }
 
 
