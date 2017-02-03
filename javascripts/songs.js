@@ -1,5 +1,11 @@
+"use strict";
+
 var songs = [];
 var songsObj = [];
+var i;
+
+
+
 
 // Get song card container
 var songsContainer = document.getElementById("main");
@@ -20,15 +26,15 @@ document.getElementById("moreButton").addEventListener("click", function(){
 	// Open and Send the XMLHttpRequest
 	dataRequest2.open("GET", "music2.json");
 	dataRequest2.send();
-})
+});
 
 songs[songs.length] = "Estimated Prophet > by The Grateful Dead on the album Terrapin Station";
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
 songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
 songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
-songs[songs.length] = "Terrapin Station > by The Grateful Dead on the album Terrapin Station";
+songs[songs.length] ="Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
+songs[songs.length] ="Terrapin Station > by The Grateful Dead on the album Terrapin Station";
 
 // Put Each song into an object that will be inserted into an array
 for(var i = 0; i < songs.length; i++){
@@ -80,7 +86,6 @@ dataRequest.send();
 
 
 
-
 function populateDOM(){
 	// If the songs container has children (songs) in it, delete them
 	if(songsContainer.hasChildNodes()){
@@ -88,7 +93,7 @@ function populateDOM(){
 			songsContainer.removeChild(songsContainer.firstChild);
 		}
 	}
-	for(var i = 0; i < songsObj.length; i++){
+	for(i = 0; i < songsObj.length; i++){
 		// Get HTML content of the song card
 		var songHtmlStructure = songElement.innerHTML;
 
@@ -98,7 +103,7 @@ function populateDOM(){
 		songHtmlStructure = songHtmlStructure.replace("SONG_GENRE", "Genre");
 		songHtmlStructure = songHtmlStructure.replace("SONG_ALBUM", songsObj[i].album);
 		songHtmlStructure = songHtmlStructure.replace("</ul>", "</ul><br>");
-		songHtmlStructure = songHtmlStructure.replace(`<ul class="songInfo">`, `<ul class="songInfo container">`)
+		songHtmlStructure = songHtmlStructure.replace(`<ul class="songInfo">`, `<ul class="songInfo container">`);
 		songHtmlStructure = songHtmlStructure.replace("--!", "--" + i);
 
 		var newSong = `<div class="song" id="song--${i}">`;
@@ -108,11 +113,11 @@ function populateDOM(){
 		songsContainer.innerHTML += newSong;
 	}
 	// Add event listeners to every delete button for each song
-	for(var i = 0; i < songsObj.length; i++){
+	for(i = 0; i < songsObj.length; i++){
 		document.getElementById("deleteButton--" + i).addEventListener("click", function(event){
-			deleteSong(event.target.id);
+			deleteSong(this.id);
 		});
-	};
+	}
 }
 
 function dataRequestComplete(event){
@@ -126,11 +131,11 @@ function dataRequestComplete(event){
 
 	// Repopulate the DOM
 	populateDOM();
-};
+}
 
 function dataRequestFailed(event){
 	console.log("FAILED");
-};
+}
 
 function deleteSong(songID){
 	var index = parseInt(songID.substring(14, songID.length));
@@ -146,4 +151,4 @@ function deleteSong(songID){
 
 	// Delete song from DOM
 	songToDelete.parentNode.removeChild(songToDelete);
-};
+}
