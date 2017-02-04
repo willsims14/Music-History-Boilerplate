@@ -19,6 +19,8 @@
   	height: 10%;
   	display: flex;
   	flex-flow: row wrap;
+  	margin-left: 2%;
+  	margin-top: 2%;
 }
 nav ul{
 	list-style: none;
@@ -37,7 +39,7 @@ nav ul li{
 
 .flex-item {
 	padding: 10px;
-  	width: 100px;
+  	width: 150px;
   	font-size: 1em;
   	text-align: left;
   	border-style: solid;
@@ -49,7 +51,8 @@ nav ul li{
 
 .sidebar__left {
   	flex-grow: 1;
-	background-color: #4DD7FA
+	background-color: #4DD7FA;
+	margin-left: 2%;
 }
 
 .sidebar__left div{
@@ -60,7 +63,8 @@ nav ul li{
 .main {
   	flex-grow: 5;
   	margin-left: 2%;
-	background-color: #FEFAC0
+	background-color: #FEFAC0;
+	margin-right: 2%;
 }
 
 .songTitle{
@@ -74,9 +78,18 @@ nav ul li{
 	list-style-type: none;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 0;
+	margin-top: 5%;
+}
+.song{
+	line-height: 0.75;
 }
 
-
+.realDeleteButton{
+	min-height: 25px;
+	text-align: right;
+}
 
 
 
@@ -88,13 +101,15 @@ nav ul li{
 .checkboxContainer{
 	display: flex;
 	flex-direction: row;
-
+	padding: 0px;
+	margin: 0;
 }
 
 /* The <div> element that holds the <label> and <input> elements */
 .genreColumn{
 	display: inline-block;
 	width: 50%;
+	margin-right: 90px;
 }
 
 /* The <input> element that is the checkbox */
@@ -126,7 +141,9 @@ img{
 
 
 
-
+.col-md-3{
+	text-align: left;
+}
 
 
 
