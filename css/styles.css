@@ -67,29 +67,6 @@ nav ul li{
 	margin-right: 2%;
 }
 
-.songTitle{
-	margin-left: 2%;
-	clear: both;
-	display: inline;
-	color: #785616;
-}
-
-.songInfo{
-	list-style-type: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 0;
-	margin-top: 5%;
-}
-.song{
-	line-height: 0.75;
-}
-
-.realDeleteButton{
-	min-height: 25px;
-	text-align: right;
-}
 
 
 
@@ -138,14 +115,21 @@ img{
 
 
 
-
-
-
-.col-md-3{
-	text-align: left;
+.song-list__item--data{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 10px;
 }
 
+.song-list{
+	list-style: none;
+}
 
+.song-title{
+	margin-bottom: 15px;
+}
 
 
 

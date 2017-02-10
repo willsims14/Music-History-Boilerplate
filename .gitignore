@@ -1,4 +1,7 @@
-/lib/
-lib/
-/lib/node_modules/
-lib/node_modules/
+
+lib/.sass-cache
+.DS_Store
+dist/
+css/
+lib/node_modules
+javascripts/fb-getter.js
